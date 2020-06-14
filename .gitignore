@@ -1,0 +1,19 @@
+# django
+db.sqlite3
+local_settings.py
+
+# pycharm
+.idea
+
+# python
+*.pyc
+__pycache__/
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
