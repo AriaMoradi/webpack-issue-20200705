@@ -1,10 +1,11 @@
 from django.db import models
+from django.templatetags.static import StaticNode
 
 
 class Course(models.Model):
     title = models.CharField(max_length=256)
     slug = models.CharField(max_length=256, unique=True)
-    image = models.ImageField()
+    image = models.ImageField(blank=True)
 
     def __str__(self):
         return self.title

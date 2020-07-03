@@ -1,6 +1,7 @@
 # django
 db.sqlite3
 local_settings.py
+media/
 
 # pycharm
 .idea
@@ -10,8 +11,8 @@ local_settings.py
 __pycache__/
 
 # Environments
-.env
-.venv
+.env/
+.venv/
 env/
 venv/
 ENV/
