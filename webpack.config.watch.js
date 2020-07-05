@@ -4,7 +4,6 @@ const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 module.exports = {
     entry: glob.sync('./*/templates/**/*.js').reduce((acc, path) => {
         var entry = path.replace(/templates\/.*\//, '')
-        console.log(entry)
         acc[entry] = path
         return acc
     }, {}),
@@ -30,4 +29,12 @@ module.exports = {
             }
         ]
     },
+    resolve: {
+        alias: glob.sync('./*/react_components').reduce((acc, p) => {
+            var djangoapp = p.replace("/react_components", '').replace("./", '');
+            acc[djangoapp] = path.resolve(__dirname, p);
+            console.log(acc)
+            return acc
+        }, {}),
+    }
 };
