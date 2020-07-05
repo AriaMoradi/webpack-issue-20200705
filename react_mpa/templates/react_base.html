@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Dorebazar | {% block title %}{{ section.title }}{% endblock %}</title>
+    <title>Dorebazar | {% block title %}{{ page_title }}{% endblock %}</title>
     {% block template_props %}
         <script id="react_props" type="application/json">
             {{ react_props|safe }}
@@ -17,8 +17,8 @@
 {% block  content %}
     <div id="root"></div>
 {% endblock %}
-    {% block react_renderer %}
-        <script type="application/javascript" src="{% static "mainapp/react_renderer.js" %}"></script>
-    {% endblock %}
+{% block react_renderer %}
+    <script type="application/javascript" src="{% static "react_renderer.js" %}"></script>
+{% endblock %}
 </body>
 </html>
